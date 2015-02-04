@@ -905,6 +905,20 @@ void Printer::setup()
     HAL::servoMicroseconds(3,SERVO3_NEUTRAL_POS, 1000);
   #endif
 #endif  
+
+// bqLCD setup:
+
+pinMode(39, OUTPUT);            //Contraste = 4.5V
+analogWrite(39, 240);
+  // flip screen, if required
+  //u8g.setRot180();
+  
+pinMode(43, OUTPUT);           //RESET DEL LCD A HIGH
+digitalWrite(43, HIGH);  
+  
+pinMode(37, OUTPUT);           //BUZZER a cero xq no tiene pull up por HW
+  //digitalWrite(37, LOW);  
+noTone(37);
 }
 
 void Printer::defaultLoopActions()
