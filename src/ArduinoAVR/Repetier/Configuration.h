@@ -1449,3 +1449,106 @@ Values must be in range 1..255
 
 #endif
 
+/****************************************************************************************
+* MegaTronics
+*	 BQCNC
+****************************************************************************************/
+#if MOTHERBOARD == 45
+#define KNOWN_BOARD 1
+
+//////////////////FIX THIS//////////////
+
+#ifndef __AVR_ATmega2560__
+#error Oops!  Make sure you have 'Arduino Mega' selected from the 'Tools -> Boards' menu.
+#endif
+
+
+
+
+#define ORIG_X_STEP_PIN         54
+#define ORIG_X_DIR_PIN          55
+#define ORIG_X_ENABLE_PIN       38
+#define ORIG_X_MIN_PIN          3
+#define ORIG_X_MAX_PIN          71   //2 //Max endstops default to disabled "-1", set to commented value to enable.
+
+#define ORIG_Y_STEP_PIN         60 // A6
+#define ORIG_Y_DIR_PIN          61 // A7
+#define ORIG_Y_ENABLE_PIN       56
+#define ORIG_Y_MIN_PIN          14
+#define ORIG_Y_MAX_PIN          15   //15
+
+#define ORIG_Z_STEP_PIN         46 // A0
+#define ORIG_Z_DIR_PIN          48 // A1
+#define ORIG_Z_ENABLE_PIN       73 // A2
+#define ORIG_Z_MIN_PIN          18
+#define ORIG_Z_MAX_PIN          19
+
+#define ORIG_E0_STEP_PIN         26
+#define ORIG_E0_DIR_PIN          28
+#define ORIG_E0_ENABLE_PIN       24
+
+#define ORIG_E1_STEP_PIN        36
+#define ORIG_E1_DIR_PIN         34
+#define ORIG_E1_ENABLE_PIN      30
+
+#define SDPOWER            1
+#define SDSS               53
+#define LED_PIN            13
+
+
+#define ORIG_FAN_PIN            12 // IO pin. Buffer needed
+#define ORIG_PS_ON_PIN          -1 	//70 BQCC
+
+//#define FAN2_PIN           7 		//bqcnc
+
+#define HEATER_0_PIN       9    // EXTRUDER 1
+#define HEATER_1_PIN       10    // EXTRUDER 2 (FAN On Sprinter)
+//#define HEATER_2_PIN       10   // Heated bed
+#define HEATER_BED_PIN     8    // BED
+
+#define TEMP_0_PIN         13   // ANALOG NUMBERING
+#define TEMP_1_PIN         14   // ANALOG NUMBERING
+#define TEMP_2_PIN         15   // ANALOG NUMBERING
+#define TEMP_BED_PIN       8   // ANALOG NUMBERING
+
+#define BEEPER_PIN 33			// Beeper on AUX-4
+#define BEEPER_TYPE 1
+
+#define SDSUPPORT 1  // sd card reader on board
+#define SDCARDDETECT 49
+
+#define DIGIPOTSS_PIN 22
+#define DIGIPOT_CHANNELS {4,5,3,0,1} // X Y Z E0 E1 digipot channels to stepper driver mapping
+
+
+#ifdef ULTRA_LCD
+
+#ifdef NEWPANEL
+#define LCD_PINS_RS 16
+#define LCD_PINS_ENABLE 17
+#define LCD_PINS_D4 23
+#define LCD_PINS_D5 25
+#define LCD_PINS_D6 27
+#define LCD_PINS_D7 29
+
+//buttons are directly attached using AUX-2
+#define BTN_EN1 31
+#define BTN_EN2 33
+#define BTN_ENC 35  //the click
+
+#define BLEN_C 2
+#define BLEN_B 1
+#define BLEN_A 0
+
+#endif
+#endif //ULTRA_LCD
+
+#define SCK_PIN          52
+#define MISO_PIN         50
+#define MOSI_PIN         51
+
+#define E0_PINS ORIG_E0_STEP_PIN,ORIG_E0_DIR_PIN,ORIG_E0_ENABLE_PIN,
+#define E1_PINS
+
+#endif
+

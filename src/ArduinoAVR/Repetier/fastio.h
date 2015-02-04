@@ -1440,7 +1440,7 @@ pins
 #else // MOTHERBOARD == 12
 
 //added below DIO definitions for RAMBo support for LCD's etc...
-
+/*
 #define DIO70_PIN       PING4
 #define DIO70_RPORT     PING
 #define DIO70_WPORT     PORTG
@@ -1466,11 +1466,46 @@ pins
 #define DIO74_WPORT     PORTJ
 #define DIO74_DDR       DDRJ
 #define DIO74_PWM       NULL
+*/
 #define DIO75_PIN       PINJ4
 #define DIO75_RPORT     PINJ
 #define DIO75_WPORT     PORTJ
 #define DIO75_DDR       DDRJ
 #define DIO75_PWM       NULL
+
+//ADDED FOR BQCNC:
+
+#define DIO70_PIN		PIND4
+#define DIO70_RPORT	PIND
+#define DIO70_WPORT	PORTD
+#define DIO70_DDR		DDRD
+#define DIO70_PWM		NULL
+
+#define DIO71_PIN		PINE6
+#define DIO71_RPORT	PINE
+#define DIO71_WPORT	PORTE
+#define DIO71_DDR		DDRE
+#define DIO71_PWM		NULL
+
+#define DIO72_PIN		PING3
+#define DIO72_RPORT	PING
+#define DIO72_WPORT	PORTG
+#define DIO72_DDR		DDRG
+#define DIO72_PWM		NULL
+
+#define DIO73_PIN		PINJ6
+#define DIO73_RPORT	PINJ
+#define DIO73_WPORT	PORTJ
+#define DIO73_DDR		DDRJ
+#define DIO73_PWM		NULL
+
+#define DIO74_PIN		PINJ7
+#define DIO74_RPORT	PINJ
+#define DIO74_WPORT	PORTJ
+#define DIO74_DDR		DDRJ
+#define DIO74_PWM		NULL
+
+//--->ADDED FOR BQCNC
 
 
 #define DIO76_PIN       PINJ5
